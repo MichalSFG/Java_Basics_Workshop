@@ -102,3 +102,20 @@ dist
 
 # TernJS port file
 .tern-port
+
+target/*
+.settings/*
+.classpath
+.project
+.factorypath
+.attach_pid*
+.idea
+*.iml
+/target
+_site/*.class
+*.jar
+*.war
+*.ear
+*.logs
+.idea/
+.eclipse
