@@ -18,7 +18,17 @@ public class TaskManager {
             case "add":
                 addTask(tasks);
                 break;
+            case "list":
+                printTasks(tasks);
+                break;
+            case "remove":
+                removeTask(tasks);
         }
+    }
+
+    private static void removeTask(String[][] tasks) {
+        System.out.println("Please select number to remove.");
+
     }
 
     private static void addTask(String[][] tasks) {
