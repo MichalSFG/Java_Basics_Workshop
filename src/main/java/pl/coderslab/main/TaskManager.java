@@ -107,7 +107,7 @@ public class TaskManager {
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
                 String task = scanner.nextLine();
-                String[] split = task.split(" ");
+                String[] split = task.split(", ");
                 for (int i = 0; i < split.length; i++) {
                     if (split[i].contains(",")) {
                         String modifiedElement = split[i].substring(0, split[i].length() - 1);
