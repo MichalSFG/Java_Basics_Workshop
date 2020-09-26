@@ -67,7 +67,7 @@ public class TaskManager {
             if (NumberUtils.isParsable(s)) {
                 int num = Integer.parseInt(s);
                 if (num >= 0 && num < tasks.length) {
-                    tasks = ArrayUtils.remove(tasks, Integer.parseInt(s));
+                    tasks = ArrayUtils.remove(tasks, num);
                     System.out.println("Value was successfully deleted.");
                     break;
                 } else
@@ -103,8 +103,7 @@ public class TaskManager {
     private static String[][] getTasksFromFile() {
         String[][] tasks = new String[0][];
         int index = 0;
-        String fileName = FILE;
-        File file = new File(fileName);
+        File file = new File(FILE);
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
                 String task = scanner.nextLine();
@@ -120,9 +119,8 @@ public class TaskManager {
                 index++;
             }
         } catch (FileNotFoundException e) {
-            System.err.println("Nie znaleziono pliku " + fileName);
+            System.err.println("Nie znaleziono pliku " + FILE);
         }
-
         return tasks;
     }
 

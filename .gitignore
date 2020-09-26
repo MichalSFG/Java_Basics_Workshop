@@ -119,3 +119,4 @@ _site/*.class
 *.logs
 .idea/
 .eclipse
+*.csv
